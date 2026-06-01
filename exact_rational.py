@@ -116,11 +116,10 @@ def as_rational_complex(z) -> RationalComplex:
     return RationalComplex(Fraction(z), Fraction(0))
 
 
-def require(name: str, condition: bool) -> None:
-    """Certificate assertion, not disabled by Python optimization flags."""
+def require(name, condition):
     if not condition:
-        raise AssertionError(f"FAILED: {name}")
-    print(f"PASS: {name}")
+        raise AssertionError(f"\033[31mFAIL: {name}\033[0m")
+    print(f"\033[32mPASS: {name}\033[0m")
 
 
 # ---------------------------------------------------------------------------
