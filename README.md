@@ -1,6 +1,6 @@
-# Exact rational certificates
+# High-Order Laplacian Spurious Eigenvalues
 
-This repository fragment contains the exact rational certificates used for the two auxiliary lemmas in the paper.
+This repository contains the exact rational certificates used for the two auxiliary lemmas in the paper *On Spurious Eigenvalues of High-Order Finite Difference Schemes for the Laplace Operator*.
 
 ## Structure
 
@@ -18,7 +18,7 @@ The `.py` files do **not** perform the mathematical verification.  They only pro
 
 ## Exactness policy
 
-All arithmetic is performed over `fractions.Fraction`.  Decimal endpoints are encoded as rational numbers such as `Fraction(160734, 10**9)`.  The code avoids floating-point arithmetic entirely.  Modulus comparisons are reduced to squared rational inequalities whenever possible.
+All arithmetic is performed over `fractions.Fraction`. The code avoids floating-point arithmetic entirely.  Modulus comparisons are reduced to squared rational inequalities whenever possible.
 
 ## How to use
 
@@ -27,3 +27,12 @@ Open each notebook and run all cells from top to bottom.  The expected output co
 ## Python version
 
 The utilities use only the Python standard library and should work with Python 3.10 or later.
+
+<!-- ## Citation
+
+If you use these notebooks, please cite the associated paper:
+
+> Yizhe Feng, Weiguo Gao, and Meiyue Shao,  
+> *On Spurious Eigenvalues of High-Order Finite Difference Schemes for the Laplace Operator*.
+
+If a journal reference, DOI, or arXiv link becomes available, it should be added here. -->
