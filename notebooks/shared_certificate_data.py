@@ -7,7 +7,7 @@ polynomial data and exact rational constants used by both notebooks.
 
 from fractions import Fraction
 
-from exact_rational import RationalComplex as CQ, poly_from_terms, poly_mul, poly_sub
+from rational_tools import RationalComplex as CQ, poly_from_terms, poly_mul, poly_sub
 
 # Rectangle I for the selected candidate root.
 xL = Fraction(160734, 10**9)
@@ -70,3 +70,42 @@ f5 = poly_from_terms({
 #   s2* = N2(s0*)/(4 s0* f5(s0*))
 N1 = poly_sub(poly_mul(f1, f5), f4)
 N2 = poly_sub(f4, poly_mul(f2, f5))
+
+
+# f6 and f7 for lambda* = f6(s0*) / f7(s0*).
+# Here f7 includes the scaling factor 180, so lambda* is the eigenvalue of L.
+f6 = poly_from_terms({
+    15: 64,
+    14: 12640,
+    13: 464928,
+    12: -16178896,
+    11: 47914340,
+    10: 5454430,
+    9: -156127576,
+    8: 357613692,
+    7: -182559273,
+    6: 1201642441,
+    5: -636151748,
+    4: -31972716,
+    3: 21662864,
+    2: -371152,
+    1: -12224,
+    0: -64,
+})
+
+f7 = poly_from_terms({
+    14: 5760,
+    13: -273600,
+    12: 2844000,
+    11: 7274160,
+    10: -102530880,
+    9: 92052000,
+    8: 289301760,
+    7: -519419520,
+    6: 400123800,
+    5: 273316680,
+    4: -23352480,
+    3: -3576960,
+    2: 311040,
+    1: -5760,
+})

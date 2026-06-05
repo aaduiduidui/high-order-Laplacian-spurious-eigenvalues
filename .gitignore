@@ -1,2 +1,9 @@
 __pycache__/
 .DS_Store
+
+# Local batch scripts and Slurm outputs
+*.sh
+slurm-*.out
+slurm-*.err
+slurm_logs/
+maple_code/verify_nonreal_lambda.mpl
